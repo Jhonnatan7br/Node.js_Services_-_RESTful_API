@@ -67,7 +67,7 @@ Launch the Fastify server to see if everything is working
 We should see the following in the console:
 > - mock-srv@1.0.0 start
 > - fastify start -l info app.js
-> - <Ctrl> + C "To quit the active shell process an Abort Signal"
+> - Ctrl + C "To quit the active shell process an Abort Signal"
 
 Install the fastify-cors plugin:
 > - $ npm install @fastify/cors
