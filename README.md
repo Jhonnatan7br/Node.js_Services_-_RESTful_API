@@ -21,15 +21,18 @@
 > - $ mkdir name_dir "Create a directory"
 > - $ cd directory_to_go "Go to directory"
 > - $ cd .. "Return to higher directory"
+> - $ npm run static 
+
+## Creating npm commands
 
 To create a custom NPM shell command, add the following lines to the scripts object in your package.json file:
 
-"""
+'''
 "scripts": {
     "static": "serve -p 5050 static",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-"""
+'''
 
 Use the npm run command, followed by the script name, to execute these commands in the terminal. For instance:
 > - $ npm run static
@@ -49,7 +52,7 @@ console.log("Server listening on port http://localhost:3000/")
 
 Since our hosted web app is served on http://localhost:5050 and our service is hosted on http://localhost:3000, requests from our web app to our service are considered cross-domain requests
 
-# Mocking GET Routes
+## Mocking GET Routes
 
 * fastify-cli framework documentation: https://github.com/fastify/fastify-cli#generate
 
@@ -80,3 +83,11 @@ Create our route folders
 
 Fastify works by dividing the service up into plugins. A plugin is a module that exports a function.
 The Fastify instance can be used to register a GET route by calling fastify.get. 
+Now let's create the mock-srv/routes/electronics/index.js
+The folder name will determine the top-level path of the route.
+
+It's important to note that the route handler function also passes request and reply objects. These are conceptually the same, but functionally different to the req and res objects passed to the Node core http.createServer request listener function, because they have their own (higher level) APIs or context. See https://www.fastify.io/docs/v3.9.x/Request/ and https://www.fastify.io/docs/v3.9.x/Reply/ for full information on their APIs.
+
+Run in two different consoles on each determined directory to have the route 
+> - $ cd .. && npm run static
+> - $ npm run dev
