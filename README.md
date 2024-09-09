@@ -1,3 +1,19 @@
+# Node.js Services, RESTful APIs & Cli tools
+
+# Setting and Installing node.js dependencies (Cli tools and Linux, MAcOS and Windows interoperability)
+
+> - $ choco install fnm "Admin access required"
+> - $ fnm install --lts " Install latest version"
+> - $ fnm --version
+> - $ node -v
+* fnm documentation: https://github.com/Schniz/fnm  
+
+# Quick File Server
+> - $ npm init
+> - $ npm install serve "Instlling base modules of node.js"
+> - $ npm mkdir static "Directory for static"
+> - $ npx serve -p 5050 static "start the file server on port 5050 and serve the contents of the static folder"
+
 ## Commands
 
 > - $ rm server.mjs "Deleting files"
@@ -7,12 +23,14 @@
 > - $ cd .. "Return to higher directory"
 
 To create a custom NPM shell command, add the following lines to the scripts object in your package.json file:
+
 """
 "scripts": {
     "static": "serve -p 5050 static",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
 """
+
 Use the npm run command, followed by the script name, to execute these commands in the terminal. For instance:
 > - $ npm run static
 
@@ -32,6 +50,9 @@ console.log("Server listening on port http://localhost:3000/")
 Since our hosted web app is served on http://localhost:5050 and our service is hosted on http://localhost:3000, requests from our web app to our service are considered cross-domain requests
 
 # Mocking GET Routes
+
+* fastify-cli framework documentation: https://github.com/fastify/fastify-cli#generate
+
 > - $ mkdir mock-srv
 > - $ cd mock-srv
 Install the Fastify framework
