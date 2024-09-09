@@ -120,3 +120,6 @@ Next we'll navigate to http://localhost:5050 and select Electronics from the cat
 In a production scenario, proper validation should be implemented to ensure data integrity and security.
 
 # Going Real Time Production
+## Enhancing an HTTP Server with WebSockets 
+
+WebSockets allow for two-way communication between browsers and servers. Similar to how HTTP protocol is built on top of the TCP protocol, the WebSocket protocol is built on top of the HTTP protocol.

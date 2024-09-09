@@ -4,7 +4,7 @@
     <script type="module" src="app.js"></script>
     <style>
       body {
-        background: #fad8d8;
+        background: #fad8d8
       }
       #add {
         margin-top: 1em;
@@ -12,7 +12,7 @@
         display: none;
       }
       #add input {
-        margin-bottom: 0.5em;
+        margin-bottom: .5em;
       }
       [name="name"],
       [name="rrp"] {
@@ -24,7 +24,7 @@
       #add button {
         font-weight: bold;
         width: 5em;
-        float: right;
+        float: right
       }
     </style>
   </head>
@@ -46,23 +46,24 @@
     </form>
     <template id="item">
       <style>
-        details {
-          font-size: 1.5em;
-        }
-        summary {
-          cursor: pointer;
-        }
-        p {
-          text-indent: 1.5rem;
-        }
-      </style>
-      <details>
-        <summary>
-          <strong><slot name="name"></slot></strong> -
-          <em><slot name="rrp"></slot></em>
-        </summary>
-        <p><slot name="info"></slot></p>
-      </details>
-    </template>
-  </body>
+         details {
+           font-size: 1.5em;
+         }
+         summary {
+           cursor: pointer;
+         }
+         p {
+           text-indent: 1.5rem;
+         }
+       </style>
+        <details>
+         <summary>
+           <strong><slot name="name"></slot></strong> -
+           <em><slot name="rrp"></slot></em>
+           <small>[Orders: <slot name="orders">pending</slot>]</small>
+         </summary>
+         <p><slot name="info"></slot></p>
+       </details>
+     </template>
+   </body>
 </html>
