@@ -111,3 +111,12 @@ The fastify.decorateRequest method is used to decorate the request object that i
 Update POST routes to handle 
 
 In a production scenario, failing to sanitize and validate incoming POST data and then sending that same POST data back in the response can lead to vulnerabilities.
+
+In two different terminals run each command, with current working directory set to the mock-srv folder.
+$ npm run static 
+$ npm run dev
+
+Next we'll navigate to http://localhost:5050 and select Electronics from the category selector.
+In a production scenario, proper validation should be implemented to ensure data integrity and security.
+
+# Going Real Time Production
