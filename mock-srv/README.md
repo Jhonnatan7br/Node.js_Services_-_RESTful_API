@@ -2,7 +2,7 @@
 
 This project was bootstrapped with Fastify-CLI.
  
-## Available Scripts
+## Available Scripts.
 
 In the project directory, you can run:  
 
