@@ -21,7 +21,6 @@
 > - $ mkdir name_dir "Create a directory"
 > - $ cd directory_to_go "Go to directory"
 > - $ cd .. "Return to higher directory"
-> - $ npm run static 
 
 ## Creating npm commands
 
@@ -88,6 +87,8 @@ The folder name will determine the top-level path of the route.
 
 It's important to note that the route handler function also passes request and reply objects. These are conceptually the same, but functionally different to the req and res objects passed to the Node core http.createServer request listener function, because they have their own (higher level) APIs or context. See https://www.fastify.io/docs/v3.9.x/Request/ and https://www.fastify.io/docs/v3.9.x/Reply/ for full information on their APIs.
 
-Run in two different consoles on each determined directory to have the route 
+Run in two different consoles on each determined directory to have the GET route 
 > - $ cd .. && npm run static
 > - $ npm run dev
+
+## Creating POST
