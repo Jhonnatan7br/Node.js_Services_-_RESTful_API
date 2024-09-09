@@ -1,0 +1,17 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "\"Learning\"",
+  "main": "index.js",
+  "scripts": {
+    "static": "serve -p 5050 static",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "test": "test",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.28.1",
+    "fastify-cli": "^6.3.0"
+  }
+}
