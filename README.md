@@ -92,3 +92,22 @@ Run in two different consoles on each determined directory to have the GET route
 > - $ npm run dev
 
 ## Creating POST
+Certain function or functions has to be upgraded to handle both GET and POST scenarios. A POST scenario occurs when the form is submitted. 
+The browser native fetch function can also perform POST requests, which are configured via a second options argument.
+
+It is highly recommended that production Node.js services are stateless. That is, they don't store their own state, but retrieve it from an upstream service or database. 
+
+We will need to create an ID for each new entry. Since we have two routes and we don't want duplicate logic (even in mocking web services, the Don't Repeat Yourself principle applies) we can create a small data utility library plugin that both routes can use.
+
+> - $ mock-srv> cd plugins
+> - $ New-Item utils.js
+
+The calculateID(idPrefix,data) method. The function starts by extracting unique IDs from the data array. Next, the code retrieves the last ID from the sorted array. Finally, the function constructs a new ID string by combining the idPrefix and the calculated next value.
+The fastify-plugin module that is used to de-encapsulate a plugin.
+The fastify.decorateRequest method is used to decorate the request object that is passed to route handler functions with a method we name mockDataInsert.
+
+"""fastify.mockDataInsert(request, opts.prefix.slice(1), data);"""
+
+Update POST routes to handle 
+
+In a production scenario, failing to sanitize and validate incoming POST data and then sending that same POST data back in the response can lead to vulnerabilities.
