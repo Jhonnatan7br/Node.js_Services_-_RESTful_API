@@ -19,6 +19,7 @@
 > - $ rm server.mjs "Deleting files"
 > - $ New-Item index.js "Item_name.js , Item_name.mjs"
 > - $ mkdir name_dir "Create a directory"
+> - $ mkdir -p name_dir/name_dir "Create a directory inside directory"
 > - $ cd directory_to_go "Go to directory"
 > - $ cd .. "Return to higher directory"
 
@@ -123,3 +124,15 @@ In a production scenario, proper validation should be implemented to ensure data
 ## Enhancing an HTTP Server with WebSockets 
 
 WebSockets allow for two-way communication between browsers and servers. Similar to how HTTP protocol is built on top of the TCP protocol, the WebSocket protocol is built on top of the HTTP protocol.
+
+A new function called realtimeOrders has been added to the frontend code. It is invoked within the event listener function attached to the input event of the category selector and within the submit event of the add form. 
+
+When a category is selected (or when a new item is added to a category), a WebSocket connection to ws://localhost:3000/orders/{category} is established with the selected category. The WebSocket connection (socket) listens for real-time messages sent from the server.
+
+This will not work until we have upgraded our mock service with server-side WebSocket functionality. To support these frontend changes, we need to support a  ws://localhost:3000/orders/{category} route. 
+
+> - $ npm install @fastify/websocket 
+
+Organize routes index.mjs and static app.js and index.html to respond to the new implemented websocket
+The fastify-websocket plugin enhances the fastify.get method. If an options object is passed as a second argument (instead of a route handler) which has the websocket property set to true
+
