@@ -121,7 +121,8 @@ Next we'll navigate to http://localhost:5050 and select Electronics from the cat
 In a production scenario, proper validation should be implemented to ensure data integrity and security.
 
 # Going Real Time Production (Web Sockets)
-(IMAGE)
+![image](https://github.com/user-attachments/assets/a2aba9e0-36fc-4048-85b3-ee290a1a83b3)
+
 
 ## Enhancing an HTTP Server with WebSockets 
 
