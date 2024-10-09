@@ -1,4 +1,9 @@
-# Node.js Services, RESTful APIs & Cli tools
+# Node.js base starter configuration Linux & Windows , RESTful APIs & Cli tools
+- Installation & Setup: This diagram will shows the macro steps involved in setting up Node.js, CLI tools, and related dependencies.
+- Quick File Server & Mock Service Setup: It will show the steps to create a file server, set up the mock service, and handle GET/POST requests.
+- WebSocket and CLI Enhancements: This diagram will demonstrate the enhancements for real-time communication using WebSockets and the implementation of the CLI tool.
+
+![image](https://github.com/user-attachments/assets/b129c997-5ec2-4769-af39-d54dcea1c0d2)
 
 # Setting and Installing node.js dependencies (Cli tools and Linux, MAcOS and Windows interoperability)
 
@@ -200,7 +205,8 @@ function* currentOrders(category) {...}
 "Now if we start our server (npm run dev in the mock-srv folder) and serve the static assets (npm run static in the project root), then navigate to the http://localhost:5050 and select any category we should see the orders of all items frequently updating."
 
 # Bidirectional Real-Time Communication
-(IMAGE)
+![image](https://github.com/user-attachments/assets/14e9c7df-68e1-4911-a6ee-c0fa0ef00ee1)
+
 
 "It would be good to support real-time server mocking of more optimal client-side behavior."
 
@@ -335,6 +341,8 @@ const argv = process.argv.slice(2);
 
 > - $ chmod u+x bin/cmd.js
 
+![image](https://github.com/user-attachments/assets/67da9c62-8cca-4f2c-986d-f5fa72124e03)
+
 
 Let's run the following command from the my-cli folder:
 
@@ -368,10 +376,6 @@ In the same terminal window let's run:
 
 If we observe the web app as we execute this command, we should see the order count for the Leaf Blower product jump from 7 to 42.
 
-
-Jhonnatan B <jhonnatan7br@gmail.com>
-Wed, Sep 11, 3:17 PM
-to me
 
 ## Parsing Command-Line Flags
 
